@@ -1,0 +1,526 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+        
+		<title>AppDoc</title>
+			
+		
+		<link rel="apple-touch-startup-image" href="imagens/icone/icon_splash_kwai.png">
+		<link rel="apple-touch-startup-image" media="(device-width:320px) and (device-height:568px) and(-webkit-device-pixel-ratio:2)" href="imagens/icone/icon_splash_kwai_iphone5.png">
+		
+		<link rel="apple-touch-icon" href="imagens/icone/icon_kwai.png">
+      <!--  <link rel="apple-touch-icon" media="(-webkit-device-pixel-ratio: 2)" href="imagens/icone/icon_kwai_retina.png">
+        !-->
+	
+		
+		<link rel="stylesheet" href="css/kwaiburger.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.structure.css">
+        <link rel="stylesheet" href="css/meuEstilo.css" />
+        <link rel ="stylesheet" href="css/carrosel.css"/>
+		
+		 <link rel ="stylesheet" href="css/style.css"/>
+		 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+		
+		<script src="js/jquery.js"></script>
+		<script src="js/inicial.js"></script>
+		<script src="js/jquery.mobile.js"></script>
+        <script src="js/meuJS.js"></script>
+		<script src="js/js_carrosel.js"></script>
+             
+    </head>
+
+    <body>
+		<div data-role="page" id="login">
+			<div data-role="header" data-theme="c">
+				<h1>Login</h1>
+			</div>
+			<div data-role="content">
+			<div class="ui-body ui-body-a">
+				<form action="" method="post"  id="frmLogin">
+				
+					<div data-role="fieldcontain">
+						<label for="username">
+						<em>* </em> Username: </label>
+						<input type="text" id="username" name="username" class="required " />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="senha">
+						<em>* </em> Password: </label>
+						<input type="password" id="password" name="password" class="required " />
+					</div>
+					<div class="ui-body ui-body-b">
+						<button class="btnLogin" type="submit" data-mini="true"  data-inline="true" data-icon="check" data-theme="b" data-iconpos="right">Login</button>
+						
+						<a href="foo.html" data-role="button"  data-mini="true" data-inline="true" data-rel="dialog" data-icon="info"  data-transition="pop" data-iconpos="right">Ajuda</a>
+						
+					</div>
+						<div data-role="popup" id="popupLogin" data-theme="e" data-overlay-theme="a" class="ui-content" style="max-width:280px">
+							<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+							<div>Dados devem ser preenchidos...</div>
+						</div>
+						<div data-role="popup" id="popupErroLogin" data-theme="e" data-overlay-theme="a" class="ui-content" style="max-width:280px">
+							<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+							<div>Dados não conferem. Tente novamente!!</div>
+						</div>
+				</form>
+				</div>
+			</div>
+		</div>
+		
+		
+    	<div id="home" data-role="page">
+            <div data-role="header" data-theme="b">
+                <h1>AppDoc  </h1>
+				
+            </div>
+           
+           <div data-role="content">
+				<div id="janela">
+					<img src="fotos/foto1.jpg">
+                    <img src="fotos/foto2.jpg">
+                    <img src="fotos/foto3.jpg">
+                    <img src="fotos/foto4.jpg">
+                    <img src="fotos/foto5.jpg">
+            
+				</div>
+                <div id="paginacao"></div> 
+            	
+				
+				<div data-role="controlgroup" data-corners="false" class="ui-icon-alt"	>
+                    <a href="#pergunta" 	data-theme="b"	data-corners="false" data-transition="flip" data-icon="arrow-r" data-iconpos="right" data-role="button">Perguntas</a>
+                    <a href="#ranking" 		data-theme="b" data-corners="false" data-transition="flip" data-icon="arrow-r" data-iconpos="right" data-role="button">Ranking</a>
+                    <a href="#feedback" 	data-theme="b" data-corners="false" data-transition="flip" data-icon="arrow-r" data-iconpos="right" data-role="button">Feedbacks</a>
+					<a href="#mapa" 	data-theme="b" data-corners="false" data-transition="flip" data-icon="arrow-r" data-iconpos="right" data-role="button">Sobre</a>           
+					
+				</div>
+            </div>
+        </div>
+		
+		
+
+        <div id="pergunta" data-role="page">
+        	<div data-role="header" data-theme="b" data-position="fixed" data-id="vs_header">
+            	<h1>Perguntas</h1>
+               <a href="#home" class="ui-icon-nodisc" data-iconshadow="false" data-transition="fade" data-icon="home" data-iconpos="notext">Home</a>
+            </div>   
+            
+           <div data-role="content" id="minhalista"> 
+				
+			</div>
+            <div data-role="footer" data-position="fixed" data-id="vs_footer">
+            	<div data-role="navbar">
+                    <ul>
+                       <li><a href="#home" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="home">Home</a></li>
+                       <li><a href="#pergunta"class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="edit">Perguntas</a></li>
+                       <li><a href="#ranking" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="star">Ranking</a></li>
+                       <li><a href="#feedback" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="refresh">Feedbacks</a></li>
+						<li><a href="#mapa" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="info">Sobre</a></li>
+                   
+				   </ul>
+                </div> <!-- fim do navbar -->
+            </div> <!-- fim do footer -->   
+        </div> <!-- fim da pagina -->
+
+        <div id="detalhe" data-role="page">
+        	<div data-role="header" data-theme="b" data-position="fixed" data-id="vs_header">
+            	<h1>Detalhe Pergunta</h1>
+               <a href="#pergunta" class="ui-icon-nodisc" data-iconshadow="false" data-transition="fade" data-icon="back" data-iconpos="notext">Back</a>
+            </div> 
+            
+            <div data-role="content">
+            	<div id="detalhe_pergunta">
+				
+				</div>
+				
+				<div id="detalhe_respostas">
+				
+				</div>
+				
+				<div id="detalhe_formulario">
+					<form action="" method="post" id="inserirResposta">
+					<h3> Adicione sua resposta</h3>
+							<input type="hidden" name="nome" id="nome" required="required">
+							<input type="hidden" name="resposta" id="resposta" required="required">
+							<input type="hidden" name="respondida" id="respondida" >
+							<input type="hidden" name="respondeu" id="respondeu" >
+							
+							<input type="hidden" name="n_respondeu" id="n_respondeu" value="0" >
+							
+							<input type="hidden" name="acertou" id="acertou" value="1">
+							<input type="hidden" name="errou" id="errou" value="0">
+							
+							<input type="hidden" name="usuarioID" id="usuarioID" required="required">
+							<input type="hidden" name="pontos" id="pontos" value="1" >
+							
+						</label>
+						<div id="respostaRB">
+							
+						</div>
+						
+						<div data-role="popup" id="popupInfo" data-theme="e" data-transition="flip" data-overlay-theme="a" class="ui-content" style="max-width:280px">
+							<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+							<div>Voce deve selecionar alguma resposta..</div>
+						</div>
+						
+						<div data-role="popup" id="popupAcerto" data-theme="e" data-transition="flip" data-overlay-theme="a" class="ui-content" style="max-width:280px">
+							<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+							<div>Parabéns você acertou..</div>
+						</div>
+						
+						<div data-role="popup" id="popupErro" data-theme="e"  data-transition="flip" data-overlay-theme="a" class="ui-content" style="max-width:280px">
+							<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+							<div>Infelizmente você errou a questão..</div>
+						</div>
+						<div data-role="popup" data-theme="e" data-transition="flip" data-overlay-theme="a" class="ui-content" style="max-width:280px" id="popupDica">
+							<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+							<div class="msgdica"></div>
+						</div>
+								
+						
+						<input type="hidden" name="perguntaID" id="perguntaID" value="32">
+						
+						<input type="button" id="dica" value="Dica"></input>
+						<input type="submit" value="Enviar" id="enviar" />
+						
+						
+					</form>
+					<input type="hidden" name="acertouTotal" id="acertouTotal" value="1">
+				</div>
+            </div> 
+            
+            <div data-role="footer" data-position="fixed" data-id="vs_footer">
+            	<div data-role="navbar">
+                    <ul>
+                       <li><a href="#home" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="home">Home</a></li>
+                       <li><a href="#pergunta"class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="edit">Perguntas</a></li>
+                       <li><a href="#ranking" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="star">Ranking</a></li>
+                      <li><a href="#feedback" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="refresh">Feedbacks</a></li>
+						<li><a href="#mapa" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="info">Sobre</a></li>
+                   
+                   
+				   </ul>
+                </div> <!-- fim do navbar -->
+            </div> <!-- fim do footer -->   
+        </div> <!-- fim da pagina -->
+                        
+     <!-- fim da pagina -->
+        
+        <div id="feedback" data-role="page">
+        	<div data-role="header" data-theme="b" data-position="fixed" data-id="vs_header">
+            	<h1>Feedbacks</h1>
+               <a href="#home" class="ui-icon-nodisc" data-iconshadow="false" data-transition="fade" data-icon="home" data-iconpos="notext">Home</a>
+            </div>   
+            
+           <div data-role="content" id="minhalistafeedback"> 
+				
+			</div>
+            <div data-role="footer" data-position="fixed" data-id="vs_footer">
+            	<div data-role="navbar">
+                    <ul>
+                      <li><a href="#home" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="home">Home</a></li>
+                       <li><a href="#pergunta"class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="edit">Perguntas</a></li>
+                       <li><a href="#ranking" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="grid">Ranking</a></li>
+                      <li><a href="#feedback" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="refresh">Feedbacks</a></li>
+						<li><a href="#mapa" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="info">Sobre</a></li>
+                   
+				   </ul>
+                </div> <!-- fim do navbar -->
+            </div> <!-- fim do footer -->   
+        </div> <!-- fim da pagina -->
+
+        <div id="detalheTipo" data-role="page">
+        	<div data-role="header" data-theme="b" data-position="fixed" data-id="vs_header">
+            	<h1>Detalhe Feedback</h1>
+               <a href="#feedback" class="ui-icon-nodisc" data-iconshadow="false" data-transition="fade" data-icon="back" data-iconpos="notext">Back</a>
+            </div> 
+            
+            <div data-role="content">
+            	<div id="detalhe_tipo">
+				
+				</div>
+				
+				<div id="detalhe_feedbacks">
+				
+				</div>
+				
+				<div id="detalhe_formulario">
+					<form action="" method="post" id="inserirFeedback">
+					<h3> Adicione seu feedback</h3>
+						<label>Título<br>
+							<input type="text" name="titulo" id="titulo" >
+							<input type="hidden" name="idUsuario" id="idUsuario" >
+						</label><br/>
+						<label>Descrição</br>
+							 <textarea cols="40" rows="8" name="descricao" id="descricao"></textarea>
+						</label>
+						<input type="hidden" name="tipo_id" id="tipo_id" value="4">
+						<input type="submit" value="enviar" id="enviar">
+						
+						
+						<div data-role="popup" id="popupTitulo" data-theme="e" data-transition="flip" data-overlay-theme="a" class="ui-content" style="max-width:280px">
+							<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+							<div>Campo Título e Descrição deve estar preenchido..</div>
+						</div>
+						
+						<div data-role="popup" id="popupDescricao" data-theme="e" data-transition="flip" data-overlay-theme="a" class="ui-content" style="max-width:280px">
+							<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+							<div>Campo Descrição deve estar preenchido..</div>
+						</div>
+					</form>
+				</div>
+            </div> 
+            
+            <div data-role="footer" data-position="fixed" data-id="vs_footer">
+            	<div data-role="navbar">
+                    <ul>
+                      <li><a href="#home" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="home">Home</a></li>
+                       <li><a href="#pergunta"class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="edit">Perguntas</a></li>
+                       <li><a href="#ranking" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="star">Ranking</a></li>
+                      <li><a href="#feedback" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="refresh">Feedbacks</a></li>
+						<li><a href="#mapa" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="info">Sobre</a></li>
+                   
+				   </ul>
+                </div> <!-- fim do navbar -->
+            </div> <!-- fim do footer -->   
+        </div> <!-- fim da pagina -->
+	
+		
+		<div id="mapa" data-role="page">
+            <div data-role="header" data-theme="b">
+			    <h1>Sobre</h1>
+            </div>
+           
+			
+			<div data-role="content">
+				<a href="#questionario" data-role="button" data-transition="flip" data-icon="grid" data-theme="b" data-mini="true" data-inline="true">Questionario</a>
+				<h3>Aplicativo Desafio do Conhecimento</h3>
+				<p>Este aplicativo foi desenvolvido como um incentivo aos alunos de Sistemas de Informação da Unibalsas para a área de programação </p>
+			<!--<a href="#popupBasic" data-rel="popup" data-position-to="window" data-transition="flip">Tecnologias utilizadas </a>	
+			!-->
+				<hr>
+				<div data-role="collapsible-set">
+					<div data-role="collapsible" data-theme="e" data-content-theme="e">
+						<h3>Tecnologias Utilizadas</h3>
+						  <div data-role="collapsible" data-theme="c" data-content-theme="b">
+							<h3>Backend</h3>
+							<ul data-role="listview">
+								<li>PHP</li>
+								<li>MySQL</li>
+								<li>Framework Laravel</li>
+								<li>WebService</li>	
+							</ul>
+						 </div>
+						  <div data-role="collapsible" data-theme="c" data-content-theme="b">
+							<h3>Frontend</h3>
+							<ul data-role="listview">
+								<li>HTML5</li>
+								<li>jQuery</li>
+								<li>jQueryMobile</li>
+								<li>Json</li>
+							</ul>
+						 </div>
+						 
+					</div>
+					
+					<div data-role="collapsible" data-theme="e" data-content-theme="e">
+						<h3>Dados do Desenvolvedor</h3>
+						<p>Atualmente desenvolve na plataforma web utilizando php com o codeigniter e laravel, plataforma mobile com o Android Nativo e jQuery Mobile. Trabalha como TI atualmente para a empresa Contabilize.
+						<hr><strong><i>&copy; Rodrigo Macedo</i></strong></hr>
+					</div>
+					<div data-role="collapsible" data-theme="e" data-content-theme="e">
+						<h3>Considerações Finais</h3>
+						<p>Este trabalho visou desenvolver uma aplicação que será útil aos acadêmicos de Sistemas de Informação da Unibalsas. Que esse trabalho venha despertar o interesse para o desenvolvimento mobile. 
+						<hr><strong><i>AppDoc - v1.0</i></strong></hr>
+					</div>
+					</div>
+					
+				<div class="sign">
+					<div class="row">
+						<div class ="col-md-2">
+							<a href="https://www.facebook.com/rodrigo.macedo.1840" target="_blank" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+						</div>
+						<div class ="col-md-2">
+						  <a href="https://plus.google.com/u/0/" target="_blank" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
+						</div>
+					</div>
+				</div>
+				</div>
+		
+			
+			<div data-role="footer" data-position="fixed" data-id="vs_footer">
+            	<div data-role="navbar">
+                    <ul>
+                     <li><a href="#home" class="ui-icon-nodisc" data-transition="flip"  data-iconshadow="false" data-icon="home">Home</a></li>
+                       <li><a href="#pergunta"class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="edit">Perguntas</a></li>
+                       <li><a href="#ranking" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="star">Ranking</a></li>
+                       <li><a href="#feedback" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="refresh">Feedbacks</a></li>
+						<li><a href="#mapa" class="ui-icon-nodisc"  data-transition="flip" data-iconshadow="false" data-icon="info">Sobre</a></li>
+                   
+                   
+				   </ul>
+                </div> <!-- fim do navbar -->
+            </div> 
+		
+		</div>
+	
+		<div id="ranking" data-role="page" >
+            <div data-role="header" data-theme="b">
+			<a href="#home" class="ui-icon-nodisc" data-iconshadow="false" data-transition="fade" data-icon="home" data-iconpos="notext"></a>
+                <h1>Ranking</h1>
+            </div>
+           
+			
+			<div data-role="content">
+			
+				<div id="table_ranking">
+				
+				</div>
+				<a href="#leftpanel3" data-role="button" data-icon="arrow-l" data-theme="b" data-mini="true" data-inline="true">Sobre</a>
+				
+				<div data-role="panel" id="leftpanel3" data-position="left" data-display="overlay" data-theme="e">
+					<h3>Sobre o Ranking</h3>
+					<p>A ideia é promover os alunos que obtiverem melhor pontuação em relação as perguntas do aplicativo.</p>
+					<p>Os três primeiros colocados que se mantiverem estáveis no ranking obterão permissão para adicionar suas perguntas no sistema.</p>
+					<a href="#" data-rel="close" data-role="button" data-theme="a" data-icon="arrow-r" data-mini="true" data-inline="true">Fechar painel</a>
+				</div><!-- /leftpanel3 -->
+				
+			
+			</div>
+		
+				
+			
+			<div data-role="footer" data-position="fixed" data-id="vs_footer">
+            	<div data-role="navbar">
+                    <ul>
+                     <li><a href="#home" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="home">Home</a></li>
+                       <li><a href="#pergunta"class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="edit">Perguntas</a></li>
+                       <li><a href="#ranking" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="star">Ranking</a></li>
+                       <li><a href="#feedback" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="refresh">Feedbacks</a></li>
+						<li><a href="#mapa" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="info">Sobre</a></li>
+                   
+                   
+				   </ul>
+                </div> <!-- fim do navbar -->
+            </div> 
+		
+		</div>
+		
+		<div id="questionario" data-role="page" >
+            <div data-role="header" data-theme="b">
+			<a href="#home" class="ui-icon-nodisc" data-iconshadow="false" data-transition="fade" data-icon="home" data-iconpos="notext"></a>
+                <h1>Questionário</h1>
+            </div>
+           
+			
+			<div data-role="content">
+			<form action="" method="post" id="responderQuestionario">
+				<div class="ui-body ui-body-c">
+					<div data-role="fieldcontain" data-theme="b">
+						<fieldset data-role="controlgroup" >
+							<legend> <b>1)</b> A aplicação possui um design:</legend>
+								<input type="radio" name="pergunta1" id="radio-choice-1a" value="1" />
+								<label for="radio-choice-1a">Muito Ruim</label>
+
+								<input type="radio" name="pergunta1" id="radio-choice-2a" value="2"  />
+								<label for="radio-choice-2a">Ruim</label>
+
+								<input type="radio" name="pergunta1" id="radio-choice-3a" value="3"  />
+								<label for="radio-choice-3a">Bom</label>
+
+								<input type="radio" name="pergunta1" id="radio-choice-4a" value="4"  />
+								<label for="radio-choice-4a">Muito Bom</label>
+						</fieldset>
+					</div>
+				</div>
+				
+				<div class="ui-body ui-body-c">
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
+							<legend> <b>2)</b> Indicaria este aplicativo para um amigo?</legend>
+								<input type="radio" name="pergunta2" id="radio-choice-1a" value="1" />
+								<label for="radio-choice-1a">Nunca</label>
+
+								<input type="radio" name="pergunta2" id="radio-choice-2a" value="2"  />
+								<label for="radio-choice-2a">Não</label>
+
+								<input type="radio" name="pergunta2" id="radio-choice-3a" value="3"  />
+								<label for="radio-choice-3a">Talvez</label>
+
+								<input type="radio" name="pergunta2" id="radio-choice-4a" value="4"  />
+								<label for="radio-choice-4a">Sim</label>
+						</fieldset>
+					</div>
+				</div>
+				<div class="ui-body ui-body-c">
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
+							<legend> <b>3)</b> De 0 a 3 que nota você daria para esta app?</legend>
+								<input type="radio" name="pergunta3" id="radio-choice-1a" value="1" />
+								<label for="radio-choice-1a">0</label>
+
+								<input type="radio" name="pergunta3" id="radio-choice-2a" value="2"  />
+								<label for="radio-choice-2a">1</label>
+
+								<input type="radio" name="pergunta3" id="radio-choice-3a" value="3"  />
+								<label for="radio-choice-3a">2</label>
+
+								<input type="radio" name="pergunta3" id="radio-choice-4a" value="4"  />
+								<label for="radio-choice-4a">3</label>
+						</fieldset>
+					</div>
+				</div>
+				
+				<input type="hidden" name="design" id="design">
+				<input type="hidden" name="indicacao" id="indicacao">
+				<input type="hidden" name="nota" id="nota">
+				<input type="hidden" name="idDOUsuario" id="idDOUsuario" >
+				
+				<input type="submit" value="Enviar" id="enviar" />
+				
+					<div data-role="popup" id="popupQuestionario1" data-transition="flip" data-theme="e" data-overlay-theme="a" data-theme="e" class="ui-content" style="max-width:280px">
+						<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+						<div>Você deve responder a primeira pergunta..</div>
+					</div>
+					<div data-role="popup" id="popupQuestionario2" data-transition="flip" data-theme="e" data-overlay-theme="a" data-theme="e" class="ui-content" style="max-width:280px">
+						<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+						<div>Você deve responder a segunda pergunta..</div>
+					</div>
+					<div data-role="popup" id="popupQuestionario3" data-transition="flip"  data-theme="e" data-overlay-theme="a" data-theme="e" class="ui-content" style="max-width:280px">
+						<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+						<div>Você deve responder a terceira pergunta..</div>
+					</div>
+					<div data-role="popup" id="popupQuestionarioConcluido" data-transition="flip" data-theme="e" data-overlay-theme="a" data-theme="e" class="ui-content" style="max-width:280px">
+						<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+						<div>Parabéns pela sua participação no questionário..</div>
+					</div>
+				
+			</div>	
+			<div data-role="footer" data-position="fixed" data-id="vs_footer">
+            	<div data-role="navbar">
+                    <ul>
+                     <li><a href="#home" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="home">Home</a></li>
+                       <li><a href="#pergunta"class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="edit">Perguntas</a></li>
+                       <li><a href="#ranking" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="star">Ranking</a></li>
+                       <li><a href="#feedback" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="refresh">Feedbacks</a></li>
+						<li><a href="#mapa" class="ui-icon-nodisc" data-transition="flip" data-iconshadow="false" data-icon="info">Sobre</a></li>
+                   </ul>
+                </div> <!-- fim do navbar -->
+            </div> 
+		</form>
+		
+		
+		</div>
+		
+		<script src=" http://localhost/appdocWS/ajax/php/listar_tipos.php?callback=preencherTipo" type="text/javascript"></script>
+		<script src="http://localhost/appdocWS/ajax/php/listar_perguntas.php?callback=listarPerguntas" type="text/javascript"></script>
+		<script src="http://localhost/appdocWS/ajax/php/listar_usuarios.php?callback=listarUsuarios" type="text/javascript"></script>
+		<script src="http://localhost/appdocWS/ajax/php/listar_rankings.php?callback=listarRankings" type="text/javascript"></script>
+	</body>
+</html>
+
+<!-- http://www.imediabrasil.com.br/cursojquerymobile/kwai_produtos.cfc?method=getProdutosListagem&callback=listarProdutos -->
+    
