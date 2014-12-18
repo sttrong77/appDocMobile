@@ -1,0 +1,12 @@
+{
+	"introduction":"Teste", 
+	"questions":[
+		{"question":"Para que serve o Try/Catch?", 
+		 "answers":["Quebrar Linhas","Converter Arquivo","Iniciar Thread","Tratar Erros"],
+		 "correct":3},
+		{"question":"Para que serve o Try/Catch?", 
+		 "answers":["Quebrar Linhas","Converter Arquivo","Iniciar Thread","Tratar Erros"],
+		 "correct":2}
+		
+	]
+}
