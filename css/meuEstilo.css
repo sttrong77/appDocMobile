@@ -1,0 +1,139 @@
+.ui-dialog-contain {
+	position: relative;
+	margin: 10% auto 15px auto;
+	
+	left:12px;
+	float: left;
+	width: 400px;
+}
+
+
+
+.imagemdetalhe {
+	width:100%;
+	border-radius:50%;
+}
+
+div#cardapio img  , div#video_lista img{
+	border-radius:50%;	
+}
+
+.ui-btn-active {
+	background:#8cc63f;
+	text-shadow:0 1px 0 #fff;
+	border:none;	
+}
+
+#video_play iframe{
+	width:100%;
+	min-height:50%
+}
+#vide_detalhe ui-content{
+	padding:0; 
+	margin:0;
+}
+
+#video_play h3, #video_play p{
+	padding:0 10%;
+}
+
+#frame_mapa { 
+	display:block; 
+	width:100%; 
+	height:360px;
+	border:none; 
+	margin:0; 
+	padding:0; 
+}
+
+.ui-icon-filme {
+	background-image:url(../imagens/btn/icon_filme.png);	
+}
+.ui-icon-mapa {
+	background-image:url(../imagens/btn/icon_mapa.png);	
+}
+.janela_resposta{
+	position:relative;
+	width:100%;
+	margin:25px 0 15px;
+	padding:0;
+	padding-bottom:5px;
+	border-bottom:1px solid #ccc;
+}
+.janela_feedback{
+	position:relative;
+	width:100%;
+	margin:25px 0 15px;
+	padding:0;
+	padding-bottom:5px;
+	border-bottom:1px solid #ccc;
+}
+#detalhe_formulario{
+	padding:5px 10px;
+	border-radius:5px;
+	background-color:#DADADA;
+}
+#detalhe h2 {
+	font-size:130%;
+	margin:20px 0 0 0;
+}
+#detalhe h3{
+	font-size:100%;
+	margin 20px 0;
+	width:100%;
+	border-bottom:1px solid #CCC
+}
+
+#detalhe h4{
+	margin:0; padding:0;
+}
+
+#detalhe p, #detalhe label, #detalhe time{
+	font-size:90%;
+	color:#666;
+	margin:0;
+}
+
+#detalhe time{
+	color:#CCC;
+	position:absolute;
+	right:0;
+	text-align:right;
+	font-size:70%;
+}
+
+#detalhe_comentarios ul{
+	margin:0; padding:0;
+	list-style:none;
+}
+#foto_lista img{
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	margin:5px;padding:5px;
+	font-size:70%;
+}
+#foto_zoom img{
+	width:100%;
+	max-width:1024px;
+}
+
+@media only screen and ( -webkit-min-device-pixel-radio:2 ) {
+	.ui-icon-filme {
+	background-image:url(imagens/btn/icon_filme_retina.png);	
+	background-size:36x 36px;
+	}
+	.ui-icon-mapa {
+	background-image:url(imagens/btn/icon_mapa_retina.png);	
+	background-size:36x 36px;
+	}
+	
+}
+.ui-dialog-contain {
+	width: 20%;
+	max-width: 200px;
+	margin: 10% auto 15px auto;
+	padding: 0;
+	position: relative;
+	top: -15px;
+}

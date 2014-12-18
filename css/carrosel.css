@@ -1,0 +1,20 @@
+	#home .ui-content	{ 	margin:0; padding:0; background-color:#FFF }
+			
+			#janela 			{ 
+									position:relative;
+									white-space:nowrap;
+									padding:0;
+									margin:0;
+									left:0;
+								}
+			#janela img			{ 	display:inline-block; margin-right:0; max-width: 100%;}
+			#paginacao			{ 	position:static; height:30px; width:320px; background:#fff; text-align:center; padding-top:5px }
+			.paginas 			{ 	position:static; margin-top:10px; box-shadow: inset 0 1px 2px #999; background-color:#ccc; display:inline-block; height:10px; width:10px; margin-right:5px; border-radius:50px  }
+			
+			.cinza				{ 	background:#ccc; }
+			.verde				{ 
+									box-shadow: none;  
+									background: -webkit-radial-gradient( 4px 2px, farthest-side, #ADF159, #8cc63f);
+									border:1px solid #7AB039;
+									height:8px; width:8px
+								}	 
